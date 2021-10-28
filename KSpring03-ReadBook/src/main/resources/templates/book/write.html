@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ReadBookV1</title>
+
+</head>
+
+<link rel="stylesheet"
+      type="text/css"
+      th:href="@{/static/css/write.css}" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body>
+
+
+    <div class="title_box">
+        <h1>READ BOOK</h1>
+        <p>똑 소리나는 독서록 2021 v1</p>
+    </div>
+
+        <form method="POST" class="sub_box"  >
+
+                <div>
+                    <input placeholder="9791163032616" name="isbn">
+                    <input placeholder="Do it 자바" name="title">
+                </div>
+
+                <div>
+                    <input placeholder="2021-10-27" name="rdate">
+                    <input placeholder="10:12:22" name="stime">
+                    <input placeholder="12:32:12" name="etime">
+                </div>
+
+                <div>
+                    <input placeholder="생각중독은 깊은생각에 빠져 주위를 돌아보지 못하는 것이 시작이다"
+                           name="rating"
+                    >
+
+                </div>
+
+                <div>
+                    <textarea placeholder="내용을 입력해주세요"
+                              name="comment"
+                    ></textarea>
+                </div>
+
+                <div class="btn_box">
+                    <button class="btn_save">저장</button>
+                    <button class="btn_re">새로작성</button>
+                    <button class="btn_list">리스트보기</button>
+                </div>
+        </form>
+
+
+</body>
+<script>
+    $(function (){
+        $("button.btn_save").on("click",function (){
+            $("form").submit()
+            location.href ="/test/test"
+        })
+    })
+</script>
+
+</html>

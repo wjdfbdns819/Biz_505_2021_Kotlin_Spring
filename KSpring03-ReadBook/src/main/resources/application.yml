@@ -1,0 +1,21 @@
+# >를 넣는 이유는 파일을 여러개 import할때 사용하기 위해서임
+# Java에서는  아래 3줄과 같은 형식의 코드를 작성해야 함
+# Optional<List<String>> config = new Optional<List<String>>();
+#   config.add("classpath:app-jpa.yml")
+#   config.add("classpath:app-dbms.yml")
+
+spring:
+  config:
+    import: >
+      optional:classpath:app-dbms.yml,
+      classpath:app-jpa.yml
+  mvc:
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations: classpath:static/
+      add-mappings: true
+
+
+
+

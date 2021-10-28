@@ -1,0 +1,21 @@
+#jpa setting
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+      jdbc:
+        batch_size: 100
+      order_insert: true
+
+
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    properties:
+      hibernate:
+        jdbc.batch_size: 50
+        order_insert: true
+        order_update: true
+        format_spl: true
+    show-sql: true
