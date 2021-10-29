@@ -1,0 +1,54 @@
+* {
+    /*초기화 */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-shadow: 2px 2px 2px black;
+    color: white;
+
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+
+    background-image: url("../images/header.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: center;
+
+
+}
+
+section.content {
+    flex: 1;
+
+    /* 중간에 있는 내용이 넘치면 header와 foot 사이에 있는 중간에만 스크롤이 발생함*/
+    overflow: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: dodgerblue;
+    color:  white;
+    text-align: center;
+    padding: 0.7rem;
+
+}
+
+
